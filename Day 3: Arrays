@@ -1,0 +1,5 @@
+function getSecondLargest(nums) {
+    let max = nums.reduce((a,b)=>Math.max(a,b));  //get max of the array
+        nums = nums.filter(n=>n!==max);           //removes max of the array
+    return nums.reduce((a,b)=>Math.max(a,b));     //get 2nd max of the array
+}
