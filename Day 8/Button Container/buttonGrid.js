@@ -1,3 +1,4 @@
+Method 1:
 let b=document.getElementById('btn5');
 let arr=[1,2,3,6,9,8,7,4];
     b.onclick=function(){
@@ -12,4 +13,18 @@ let arr=[1,2,3,6,9,8,7,4];
     document.getElementById('btn7').innerHTML =arr[6];
     document.getElementById('btn4').innerHTML =arr[7];
     
+}
+
+Method 2:
+
+let nums=[1,2,3,6,9,8,7,4];
+const ids=[1,2,3,6,9,8,7,4];
+
+let btn5=document.getElementById("btn5");
+
+btn5.onclick=function() {
+    nums.unshift(nums.pop());
+    for (i=0; i<=7; i++) {
+        document.getElementById("btn"+ids[i]).innerHTML=nums[i];
+    }
 }
